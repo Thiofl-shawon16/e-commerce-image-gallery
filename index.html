@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .total {
+    text-align: center;
+}
+
+        .bigimage img{
+            height: 432px;
+        }
+        .smallimage img {
+         height: 105px;
+         opacity: .5;
+        }
+        .smallimage img:hover{
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="total">
+        <div class="bigimage">
+
+            <img id="bigimage"src="1.jpg">
+
+        </div>
+
+        <div class="smallimage">
+
+            <img src="1.jpg" onmouseover="myfunc(this)">
+            <img src="2.jpg" onmouseover="myfunc(this)">
+            <img src="3.jpg" onmouseover="myfunc(this)">
+            <img src="4.jpg" onmouseover="myfunc(this)">
+
+        </div>
+    </div>
+
+    <script>
+        function myfunc(smallimg){
+            document.querySelector("#bigimage").src=smallimg.src
+        }
+    </script>
+</body>
+</html>
